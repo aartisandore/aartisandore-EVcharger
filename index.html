@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoltUp - Battery Swapping Solution</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.jpg" alt="VoltUp logo">
+        <div>
+          <nav>
+            <ul class="menu">
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services and Products</a></li>
+              <li><a href="#tech-options">Technology</a></li>
+              <li><button class="contact-button">Contact Us</button></li>
+            </ul>
+          </nav>
+          <button class="menu-toggle">☰</button>
+        </div>
+        
+  </header>
+
+  <section id="hero">
+    <div class="hero-content">
+      <h1>Dont Stop Just Swap !</h1>
+      <img src="Battery_Swapping_Station_.webp">
+
+      <button class="cta-button">Get Started</button>
+    </div>
+  </section>
+  
+
+  <section id="about">
+    <div class="about-box">
+      <h1>About EV Charge</h1>
+      <img src="images/imag2.gif">
+      <h2>Taking Charge of Today with One Eye on Tomorrow.</h2>
+      <p>The EV Charge platform is designed to bring you the future of urban mobility now. 
+      <br>Imagine a world where you never have to wait for your electric vehicle to recharge. 
+      <br>That world is now a reality. EV Charge is a meticulously built eco-system, one-stop battery 
+      <br>swapping platform that promises a future where all 2 and 3 wheeler vehicles can run with 
+      zero downtime.<br>EV Charge is transparent, accessible, safe, and most of all instant. <br> A perfect 
+      solution for the smart cities of our future.</p>
+    </div>
+    <div class="about-box">
+    <h1>Vision</h1>
+    <img src="images/3wheeler.gif">
+    <p>Accelerating adoption of sustainable clean energy in daily transport</p>
+  </div>
+
+  <div class="about-box">
+    <h1>Mission</h1>
+    <p>To enable 1 million electric vehicles running on a smart sustainably fuelled battery swapping network.</p>
+  </div>
+  </section>
+
+    <!-- Services Section -->
+  <section id="services">
+    <div class="container">
+      <h2>Services and Products</h2>
+      <div class="subsection">
+        <h3>Our Services</h3>
+        <div class="service-cards">
+          <div class="card">
+            <h4 class="card-header" onclick="toggleDropdown('service-swapping')">Swapping</h4>
+            <h5 class="card-header" onclick="toggleDropdown('swapping-batteries')">Batteries</h5>
+            <img src="images/battery.png">
+            <p id="swapping-batteries" class="card-content">Smart and intelligently designed BMS enabled Lithium-ion batteries, <br>
+              designed to work as a turnkey solution for the future mobility needs of 2 and 3-wheeler vehicles. <br>
+              The batteries are safe and powerful yet light, making it easy to swap.<br> 
+              Lead-acid batteries are of the past whereas Li-Ion batteries are re-defining the future of all e-vehicles.</p>
+
+              <h6 class="card-header" onclick="toggleDropdown('swapping-charging')">Charging Station</h5>
+              <img src="images/charging station.jpg">
+              <p id="swapping-charging" class="card-content">EV Charge smart swapping station ensures delivering a fully charged battery in 2-mins.
+                 <br>Keeping your vehicle unplugged for hours.<br> Designed in a plug n play manner for easy deployment in densely populated areas.<br> 
+                 Modular battery charging. <br>Connected helping sharing real-time information of battery availability and charging status. <br>
+                All VoltUp batteries are charged in a quality and temperature controlled environment.
+          </div>
+          <div class="card">
+            <h4 class="card-header" onclick="toggleDropdown('service-partner-benefits')">Platform Partner Benefits</h4>
+            <img src="images/excel-image-5.png">
+            <p id="service-partner-benefits" class="card-content">
+              Larger Network
+
+              <br>
+              
+              Ease of running business: Transparency | Control | Real time update
+
+              <br>
+              
+              Consistent Returns
+
+              <br>
+              
+              Faster growth
+
+              <br>
+              
+              Part of the EV revolution</p>
+          </div>
+          <div class="card">
+            <h4 class="card-header" onclick="toggleDropdown('service-technology')">Technology</h4>
+            <img src="images/OIP.jpeg">
+            <p id="service-technology" class="card-content">EV Charge believes that the future of e-vehicles is driven by data and technology,<br> 
+              hence it is continuously evolving with smarter and efficient technology embedded products which not only collects data, <br>
+              but also manages products and provides real-time updates.</p>
+          </div>
+        </div>
+      </div>
+
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Internal Dropdown with Descriptions</title>
+        <style>
+          .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 50px;
+          }
+      
+          select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+          }
+      
+          .description-box {
+            margin-top: 20px;
+            font-size: 16px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            display: none;
+            transition: display 0.5s ease;
+          }
+      
+          .description-box.active {
+            display: block;
+          }
+      
+          h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+          }
+        </style>
+      </head>
+      <body>
+      
+        <div class="container">
+          <h2>Choose a Technology</h2>
+          <img src="images/OIP.jpeg">
+      
+          <!-- Dropdown Menu -->
+          <label for="tech-options">Select a Technology:</label>
+          <select id="tech-options" name="tech-options" onchange="showDescription()">
+            <option value="">-- Select --</option>
+            <option value="data-driven">Data-Driven Solutions</option>
+            <option value="bms">BMS (Battery Management System)</option>
+            <option value="telamatic">Telamatic</option>
+          </select>
+      
+          <!-- Description Boxes -->
+          <div id="data-driven" class="description-box">
+            <h3>Data-Driven Solutions</h3>
+            <p>EV Charger has one of the most technologically <br>
+              advanced charging infrastructures with <br>
+              the ability to monitor battery’s health and availability <br>
+              with real-time data to ensure optimum usage and maximum lifespan.</p>
+          </div>
+      
+          <div id="bms" class="description-box">
+            <h3>BMS (Battery Management System)</h3>
+            <p>Built to monitor, protect, balance, and communicate;<br>
+              EV Charger batteries are enabled with Battery Management System (BMS)<br>
+                and Telematics to share live information like temperature, <br>
+                voltage, current, distribution, short circuit, etc. over cloud.</p>
+          </div>
+      
+          <div id="telamatic" class="description-box">
+            <h3>Telamatic</h3>
+            <p>EV Charge batteries are integrated with Telematics which helps in <br>
+              tracking crucial data like kilometers traveled, driving quality, <br>
+              live location, speed alert, accident alerts, and geofencing for protection <br>
+              against misuse and theft to ensure safety, optimum battery performance<br>
+               and deliver high value.</p>
+          </div>
+        </div>
+      
+        <script>
+          function showDescription() {
+            const selectedValue = document.getElementById("tech-options").value;
+            const descriptions = document.querySelectorAll(".description-box");
+      
+            // Hide all description boxes initially
+            descriptions.forEach(function(box) {
+              box.classList.remove("active");
+            });
+      
+            // Show the selected description box
+            if (selectedValue) {
+              const selectedBox = document.getElementById(selectedValue);
+              if (selectedBox) {
+                selectedBox.classList.add("active");
+              }
+            }
+          }
+        </script>
+      
+      </body>
+      </html>
+      
+    
+      
+      <!-- Products Section -->
+      <div class="subsection">
+        <h3>Our Products</h3>
+        <div class="product-cards">
+          <div class="card">
+            <h4 class="card-header" onclick="toggleDropdown('product-battery')">Mobile Platform</h4>
+            <p id="product-battery" class="card-content">A single application for partners to operate a business, <br>maintain information, register drivers, and track their battery usages. 
+              <br>EV Charger App supports Wallet transactions and keeps track of their earnings.</p>
+            <h5>Partners</h5>
+            <img src="images/electric-EV mobile.avif">
+          </div>
+
+         
+          <div class="card">
+            <h4 class="card-header" onclick="toggleDropdown('product-chargers')">Smart EV Charger Lithium-Ion batteries</h4>
+            <img src="images/OIP 2jpeg.jpeg">
+            <p>Why compromise with regular Li-ion or Lead acid batteries when you can get a smarter, powerful and efficient option with Ev Charger batteries.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    .container {
+      margin-bottom: 30px;
+    }
+  
+    .subsection {
+      margin-top: 20px;
+    }
+  
+    .card {
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+    }
+  
+    .card-header {
+      cursor: pointer;
+      font-size: 1.1rem;
+      color: green;
+    }
+  
+    .card-content {
+      display: none;
+      margin-top: 5px;
+      font-size: 1rem;
+      color: #333;
+    }
+  
+    .card-content.active {
+      display: block;
+    }
+  </style>
+  
+  <script>
+    function toggleDropdown(id) {
+      const content = document.getElementById(id);
+      content.classList.toggle('active');
+    }
+  </script>
+  
+     
+  
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer with Enquiry Form</title>
+    <style>
+      footer {
+        background-color: green;
+        padding: 20px 0;
+        font-family: Arial, sans-serif;
+      }
+  
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+  
+      .social-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 15px;
+      }
+  
+      .social-links a {
+        text-decoration: none;
+        color: #007bff;
+        transition: color 0.3s;
+      }
+  
+      .social-links a:hover {
+        color: #0056b3;
+      }
+  
+      .enquiry-form {
+        max-width: 400px;
+        margin-top: 20px;
+      }
+  
+      .enquiry-form h3 {
+        margin-bottom: 10px;
+      }
+  
+      .enquiry-form label {
+        display: block;
+        margin-bottom: 5px;
+      }
+  
+      .enquiry-form input,
+      .enquiry-form textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+  
+      .enquiry-form button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+  
+      .enquiry-form button:hover {
+        background-color: #0056b3;
+      }
+  
+      .error-message {
+        color: red;
+        font-size: 0.9em;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+  
+  <footer>
+    <div class="container">
+      <p>&copy; GD Global Technology 2024 EV Charger.</p>
+      <ul class="social-links">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+  
+      <div class="enquiry-form">
+        <h3>Contact Us</h3>
+        <form id="enquiryForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Your Name">
+          <span id="nameError" class="error-message"></span>
+  
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Your Email">
+          <span id="emailError" class="error-message"></span>
+  
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" placeholder="Your Message" rows="4"></textarea>
+          <span id="messageError" class="error-message"></span>
+  
+          <button type="button" onclick="validateForm()">Submit</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    function validateForm() {
+      // Get form elements
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+  
+      // Error message elements
+      const nameError = document.getElementById('nameError');
+      const emailError = document.getElementById('emailError');
+      const messageError = document.getElementById('messageError');
+  
+      // Clear previous error messages
+      nameError.textContent = '';
+      emailError.textContent = '';
+      messageError.textContent = '';
+  
+      // Validation flags
+      let isValid = true;
+  
+      // Validate name
+      if (name === '') {
+        nameError.textContent = 'Name is required.';
+        isValid = false;
+      }
+  
+      // Validate email
+      if (email === '') {
+        emailError.textContent = 'Email is required.';
+        isValid = false;
+      } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+        emailError.textContent = 'Please enter a valid email address.';
+        isValid = false;
+      }
+  
+      // Validate message
+      if (message === '') {
+        messageError.textContent = 'Message is required.';
+        isValid = false;
+      }
+  
+      // Submit if valid
+      if (isValid) {
+        alert('Thank you for your enquiry!');
+        document.getElementById('enquiryForm').reset();
+      }
+    }
+  </script>
+  
+  </body>
+  </html>
+  
+
+  <script src="js/script.js"></script>
+</body>
+</html>
